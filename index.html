@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CDP数据图</title> 
+    <link href="css/index.css" rel="stylesheet" />
+</head>  
+<body>
+  <!-- 头部盒子-->
+   	<header>
+      <h1>2022年CDP数据分析</h1>
+      <div class="showTime"></div>
+      <script>
+        var t = null;
+        t = setTimeout(time, 1000);//開始运行
+        function time() {
+          clearTimeout(t);//清除定时器
+          dt = new Date();
+          var year = dt.getFullYear();
+          var month = dt.getMonth() + 1;
+          var day = dt.getDate();
+          var hours = dt.getHours();//获取时
+          var minutes = dt.getMinutes();//获取分
+          var seconds = dt.getSeconds();//获取秒
+          document.querySelector(".showTime").innerHTML = '时间 : ' + year + "年" + month + "月" + day + "日-" + hours + "时" + minutes + "分" + seconds + "秒";
+          t = setTimeout(time, 1000); //设定定时器，循环运行     
+        }
+      </script>
+    </header>
+    <script src="js/flexible.js" ></script>
+    <!-- 主体内容 -->
+    <section class="mainbox">
+      <div class="column">
+        <div class="panel bar1">
+          <h2>2022年1季度</h2>
+          <div class="chart"></div>
+          <div class="panel-footer"></div>
+        </div>
+        <div class="panel bar2">
+          <h2>2022年2季度</h2>
+          <div class="chart"></div>
+          <div class="panel-footer"></div>
+        </div>
+        <div class="panel pie">
+          <h2>2022年工单总数占比</h2>
+          <div class="chart"></div>
+          <div class="panel-footer"></div>
+        </div>
+      </div>
+      <div class="column">
+        <!--数字模块-->
+        <div class="num">
+          <div class="num-hd">
+            <ul>
+              <li>255</li>
+              <li>13700</li>
+              <li>64080</li>
+            </ul>
+          </div>
+          <div class="num-bd">
+            <ul>
+              <li>CDP客服人数</li>
+              <li>KSF员工人数</li>
+              <li>工单数量</li>
+            </ul>
+          </div>
+        </div>
+        <!--地图模块-->
+        <div class="map">
+          <div class="chart"></div>
+        </div>
+      </div>
+      <div class="column">
+        <div class="panel bar3">
+          <h2>2022年3季度</h2>
+          <div class="chart"></div>
+          <div class="panel-footer"></div>
+        </div>
+        <div class="panel bar4">
+          <h2>2022年4季度</h2>
+          <div class="chart"></div>
+          <div class="panel-footer"></div>
+        </div>
+        <div class="panel line">
+          <h2>各地CDP客服人数</h2>
+          <div class="chart"></div>
+          <div class="panel-footer"></div>
+        </div>
+      </div>
+    </section>
+  <script src="js/echarts.min.js"></script>
+  <script src="js/china.js"></script>
+  <script src="js/index.js"></script>
+
+</body>
+</html>
