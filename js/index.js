@@ -948,51 +948,324 @@
       return data;
     }
     var dataValue = dealwithdata();
-    var data1 = dataValue.splice(0, 8);
+    // var data1 = dataValue.splice(0, 1);
+    var dataSH =dataValue.splice(0, 1);
+    var dataBJ = dataValue.splice(0, 1);
+    var dataHEB = dataValue.splice(0, 1);
+    var dataDL = dataValue.splice(0, 1);
+    var dataTJ = dataValue.splice(0, 1);
+    var dataLF = dataValue.splice(0, 1);
+    var dataHZ = dataValue.splice(0, 1);
+    var dataCQ = dataValue.splice(0, 1);
+
     var option = {
       series: [
+        // {
+        //   name: "",
+        //   type: "scatter",
+        //   coordinateSystem: "geo",
+        //   data: dataValue,
+        //   //   symbolSize: function(val) {
+        //   //     return val[2] / 10;
+        //   //   },
+        //   symbol: "circle",
+        //   symbolSize: 8,
+        //   hoverSymbolSize: 10,
+        //   tooltip: {
+        //     formatter(value) {
+        //       return value.data.name + "<br/>" + "设备数：" + "22";
+        //     },
+        //     show: true
+        //   },
+        //   encode: {
+        //     value: 2
+        //   },
+        //   label: {
+        //     formatter: "{b}",
+        //     position: "right",
+        //     show: false
+        //   },
+        //   itemStyle: {
+        //     color: "#0efacc"
+        //   },
+        //   emphasis: {
+        //     label: {
+        //       show: false
+        //     }
+        //   }
+        // },
         {
-          name: "",
-          type: "scatter",
+          name: "上海",
+          type: "effectScatter",
           coordinateSystem: "geo",
-          data: dataValue,
-          //   symbolSize: function(val) {
-          //     return val[2] / 10;
-          //   },
-          symbol: "circle",
-          symbolSize: 8,
-          hoverSymbolSize: 10,
+          data: dataSH,
+          symbolSize: 15,
           tooltip: {
             formatter(value) {
-              return value.data.name + "<br/>" + "设备数：" + "22";
+              return value.data.name + "<br/>" + "第一季度:CDP客服人数30,KSF人数1000,工单数量700,SLA99.60%" + "<br/>" + "第二季度:CDP客服人数30,KSF人数1000,工单数量700,SLA99.60%" 
+              + "<br/>" + "第三季度:CDP客服人数28,KSF人数1000,工单数量700,SLA99.60%"+ "<br/>" + "第四季度:CDP客服人数25,KSF人数900,工单数量800,SLA99.70%";
             },
             show: true
+            
           },
           encode: {
             value: 2
           },
+          showEffectOn: "render",
+          rippleEffect: {
+            brushType: "stroke",
+            color: "#0efacc",
+            period: 9,
+            scale: 5
+          },
+          hoverAnimation: true,
           label: {
             formatter: "{b}",
             position: "right",
-            show: false
+            show: true
           },
           itemStyle: {
-            color: "#0efacc"
+            color: "#0efacc",
+            shadowBlur: 2,
+            shadowColor: "#333"
           },
-          emphasis: {
-            label: {
-              show: false
-            }
-          }
+          zlevel: 1
         },
         {
-          name: "Top 6",
+          name: "北京",
           type: "effectScatter",
           coordinateSystem: "geo",
-          data: data1,
+          data: dataBJ,
           symbolSize: 15,
           tooltip: {
-            show: false
+            formatter(value) {
+              return value.data.name + "<br/>" + "第一季度:CDP客服人数50,KSF人数1000,工单数量200,SLA99.00%" + "<br/>" + "第二季度:CDP客服人数45,KSF人数900,工单数量300,SLA98.00%" 
+              + "<br/>" + "第三季度:CDP客服人数42,KSF人数850,工单数量800,SLA99.00%"+ "<br/>" + "第四季度:CDP客服人数40,KSF人数800,工单数量980,SLA99.20%";
+            },
+            show: true
+            
+          },
+          encode: {
+            value: 2
+          },
+          showEffectOn: "render",
+          rippleEffect: {
+            brushType: "stroke",
+            color: "#0efacc",
+            period: 9,
+            scale: 5
+          },
+          hoverAnimation: true,
+          label: {
+            formatter: "{b}",
+            position: "right",
+            show: true
+          },
+          itemStyle: {
+            color: "#0efacc",
+            shadowBlur: 2,
+            shadowColor: "#333"
+          },
+          zlevel: 1
+        },
+        {
+          name: "哈尔滨",
+          type: "effectScatter",
+          coordinateSystem: "geo",
+          data: dataHEB,
+          symbolSize: 15,
+          tooltip: {
+            formatter(value) {
+              return value.data.name + "<br/>" + "第一季度:CDP客服人数25,KSF人数1000,工单数量800,SLA99.00%" + "<br/>" + "第二季度:CDP客服人数24,KSF人数1000,工单数量1200,SLA98.90%" 
+              + "<br/>" + "第三季度:CDP客服人数22,KSF人数1000,工单数量1200,SLA99.50%"+ "<br/>" + "第四季度:CDP客服人数20,KSF人数1000,工单数量1100,SLA99.50%";
+            },
+            show: true
+            
+          },
+          encode: {
+            value: 2
+          },
+          showEffectOn: "render",
+          rippleEffect: {
+            brushType: "stroke",
+            color: "#0efacc",
+            period: 9,
+            scale: 5
+          },
+          hoverAnimation: true,
+          label: {
+            formatter: "{b}",
+            position: "right",
+            show: true
+          },
+          itemStyle: {
+            color: "#0efacc",
+            shadowBlur: 2,
+            shadowColor: "#333"
+          },
+          zlevel: 1
+        },
+        {
+          name: "大连",
+          type: "effectScatter",
+          coordinateSystem: "geo",
+          data: dataDL,
+          symbolSize: 15,
+          tooltip: {
+            formatter(value) {
+              return value.data.name + "<br/>" + "第一季度:CDP客服人数20,KSF人数2000,工单数量1200,SLA99.00%" + "<br/>" + "第二季度:CDP客服人数21,KSF人数2000,工单数量1500,SLA99.00%" 
+              + "<br/>" + "第三季度:CDP客服人数20,KSF人数2000,工单数量1500,SLA99.00%"+ "<br/>" + "第四季度:CDP客服人数20,KSF人数2000,工单数量2000,SLA99.00%";
+            },
+            show: true
+            
+          },
+          encode: {
+            value: 2
+          },
+          showEffectOn: "render",
+          rippleEffect: {
+            brushType: "stroke",
+            color: "#0efacc",
+            period: 9,
+            scale: 5
+          },
+          hoverAnimation: true,
+          label: {
+            formatter: "{b}",
+            position: "right",
+            show: true
+          },
+          itemStyle: {
+            color: "#0efacc",
+            shadowBlur: 2,
+            shadowColor: "#333"
+          },
+          zlevel: 1
+        },
+        {
+          name: "天津",
+          type: "effectScatter",
+          coordinateSystem: "geo",
+          data: dataTJ,
+          symbolSize: 15,
+          tooltip: {
+            formatter(value) {
+              return value.data.name + "<br/>" + "第一季度:CDP客服人数66,KSF人数2200,工单数量6000,SLA99.50%" + "<br/>" + "第二季度:CDP客服人数62,KSF人数2100,工单数量7000,SLA99.70%" 
+              + "<br/>" + "第三季度:CDP客服人数65,KSF人数2200,工单数量6000,SLA99.20%"+ "<br/>" + "第四季度:CDP客服人数70,KSF人数2300,工单数量8200,SLA99.50%";
+            },
+            show: true
+            
+          },
+          encode: {
+            value: 2
+          },
+          showEffectOn: "render",
+          rippleEffect: {
+            brushType: "stroke",
+            color: "#0efacc",
+            period: 9,
+            scale: 5
+          },
+          hoverAnimation: true,
+          label: {
+            formatter: "{b}",
+            position: "right",
+            show: true
+          },
+          itemStyle: {
+            color: "#0efacc",
+            shadowBlur: 2,
+            shadowColor: "#333"
+          },
+          zlevel: 1
+        },
+        {
+          name: "廊坊",
+          type: "effectScatter",
+          coordinateSystem: "geo",
+          data: dataLF,
+          symbolSize: 15,
+          tooltip: {
+            formatter(value) {
+              return value.data.name + "<br/>" + "第一季度:CDP客服人数40,KSF人数3000,工单数量2300,SLA98.00%" + "<br/>" + "第二季度:CDP客服人数45,KSF人数3500,工单数量3000,SLA98.50%" 
+              + "<br/>" + "第三季度:CDP客服人数38,KSF人数3500,工单数量3000,SLA98.50%"+ "<br/>" + "第四季度:CDP客服人数40,KSF人数3600,工单数量2500,SLA99.50%";
+            },
+            show: true
+            
+          },
+          encode: {
+            value: 2
+          },
+          showEffectOn: "render",
+          rippleEffect: {
+            brushType: "stroke",
+            color: "#0efacc",
+            period: 9,
+            scale: 5
+          },
+          hoverAnimation: true,
+          label: {
+            formatter: "{b}",
+            position: "right",
+            show: true
+          },
+          itemStyle: {
+            color: "#0efacc",
+            shadowBlur: 2,
+            shadowColor: "#333"
+          },
+          zlevel: 1
+        },
+        {
+          name: "杭州",
+          type: "effectScatter",
+          coordinateSystem: "geo",
+          data: dataHZ,
+          symbolSize: 15,
+          tooltip: {
+            formatter(value) {
+              return value.data.name + "<br/>" + "第一季度:CDP客服人数20,KSF人数500,工单数量600,SLA99.90%" + "<br/>" + "第二季度:CDP客服人数18,KSF人数500,工单数量600,SLA99.90%" 
+              + "<br/>" + "第三季度:CDP客服人数20,KSF人数500,工单数量600,SLA99.90%"+ "<br/>" + "第四季度:CDP客服人数20,KSF人数500,工单数量700,SLA99.95%";
+            },
+            show: true
+            
+          },
+          encode: {
+            value: 2
+          },
+          showEffectOn: "render",
+          rippleEffect: {
+            brushType: "stroke",
+            color: "#0efacc",
+            period: 9,
+            scale: 5
+          },
+          hoverAnimation: true,
+          label: {
+            formatter: "{b}",
+            position: "right",
+            show: true
+          },
+          itemStyle: {
+            color: "#0efacc",
+            shadowBlur: 2,
+            shadowColor: "#333"
+          },
+          zlevel: 1
+        },
+        {
+          name: "重庆",
+          type: "effectScatter",
+          coordinateSystem: "geo",
+          data: dataCQ,
+          symbolSize: 15,
+          tooltip: {
+            formatter(value) {
+              return value.data.name + "<br/>" + "第一季度:CDP客服人数15,KSF人数2500,工单数量1800,SLA99.00%" + "<br/>" + "第二季度:CDP客服人数18,KSF人数2600,工单数量1800,SLA99.00%" 
+              + "<br/>" + "第三季度:CDP客服人数20,KSF人数2600,工单数量1800,SLA99.00%"+ "<br/>" + "第四季度:CDP客服人数20,KSF人数2600,工单数量2500,SLA99.75%";
+            },
+            show: true
+            
           },
           encode: {
             value: 2
@@ -1017,6 +1290,13 @@
           },
           zlevel: 1
         }
+
+
+
+
+
+
+
       ],
       tooltip: {
         trigger: "item",
